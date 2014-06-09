@@ -1,0 +1,30 @@
+[
+  {
+    "cmd":"open",
+    "wd": ".",
+    "args": "/usr/home/sources",
+    "label": "Open Sources"
+  },
+  {
+    "cmd": "echo",
+    "args": "Hello World",
+    "label": "hello"
+  },
+  {
+    "cmd": "gradle",
+    "args": "cI id",
+    "env": ["JAVA_HOME=/usr/local/java/jdk1.8.0_05"],
+    "label": "Idea"
+  },
+  {
+    "cmd": "cat",
+    "args": "/usr/home/sources/pleasedoit/index.txt",
+    "label": "TODO"
+  },
+  {
+    "cmd": "node",
+    "args": "app.js",
+    "wd": "/usr/home/sources/node/mycv",
+    "label": "MyCV Node"
+  }
+]

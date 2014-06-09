@@ -1,0 +1,18 @@
+apply plugin:'java'
+apply plugin:'application'
+apply plugin:'idea'
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+    ['jackson-core', 'jackson-annotations', 'jackson-databind'].each {
+        compile group:'com.fasterxml.jackson.core', name: it, version: '2.2.3'
+    }
+}
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+mainClassName='com.github.skhatri.App'
+
