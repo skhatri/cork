@@ -26,5 +26,10 @@
     "args": "app.js",
     "wd": "/usr/home/sources/node/mycv",
     "label": "MyCV Node"
+  },
+  {
+    "cmd": "git",
+    "args": "status",
+    "label": "git status"
   }
 ]

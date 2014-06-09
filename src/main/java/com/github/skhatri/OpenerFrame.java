@@ -66,7 +66,7 @@ public class OpenerFrame extends JFrame {
     }
 
     private Color anyColor() {
-        Color[] color = {Color.PINK, Color.ORANGE, Color.GREEN, Color.RED, Color.BLUE, Color.CYAN, Color.MAGENTA, Color.BLACK};
+        Color[] color = {Color.ORANGE,  Color.RED, Color.BLUE, Color.MAGENTA, Color.BLACK};
         int random = ((Double) (Math.random() * color.length)).intValue();
         return color[random];
     }
@@ -74,6 +74,7 @@ public class OpenerFrame extends JFrame {
     private Component addMenu() {
         OnNewProcessListener processListener = (name, process) -> {
             JButton processBtn = new JButton("X " + name);
+            processBtn.setForeground(Color.red);
             processBtn.addActionListener((action) -> {
                 process.destroy();
                 processBtn.setVisible(false);
@@ -101,7 +102,7 @@ public class OpenerFrame extends JFrame {
             });
             options.add(item);
         };
-        commandRepository.getItems().parallelStream().forEach(bindUI);
+        commandRepository.getItems().stream().forEach(bindUI);
         getContentPane().add(options);
         return options;
     }
